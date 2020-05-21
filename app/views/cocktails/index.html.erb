@@ -1,11 +1,23 @@
 <div class="container">
-<h1>List of Cocktails</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1560963689-b5682b6440f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1586&q=80);">
+  <div class="container">
+    <h1>Our Cocktails</h1>
+    <p>Good Vibe for Good Day.</p>
+  </div>
+</div>
+
+<div class="container-cocktails">
 <ul>
 <% @cocktails.each do |cocktail| %>
-  <li><%= cocktail.name %></li>
-  <%= link_to "Details", cocktail_path(cocktail) %>
-  <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%#= link_to cocktail_path(cocktail) do %>
+   <li> <%= cocktail.name %> </li>
+   <%= link_to "Details", cocktail_path(cocktail) %>
+    <%= link_to 'Delete', cocktail_path(cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+   <div clas="image">
+      <%= image_tag("https://images.unsplash.com/photo-1541975902628-b157a9411603?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1647&q=80", width:"200", display:"flex")%>
+    </div>
 <% end %>
-</ul>
-<%= link_to "Add a cocktail", new_cocktail_path %>
+</div>
+<br>
+<%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-primary" %>
 </div>

@@ -12,7 +12,9 @@ Dose.destroy_all
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
+Ingredient.create(name: "Rum")
 
 Cocktail.create(name: "Mint Julep")
 Cocktail.create(name: "Whiskey Sour")
 Cocktail.create(name: "Mojito")
+Cocktail.create(name: "Cuba Libre")
