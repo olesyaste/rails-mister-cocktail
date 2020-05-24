@@ -4,6 +4,8 @@
   <%= dose.ingredient.name %>
   <%= dose.description %>
 <% end %>
-
-<%= link_to "Create a dose", new_cocktail_dose_path(@cocktail) %>
-<%= link_to "Home", cocktails_path %>
+<%= cl_image_tag "zlxifb8sjjfui5hmrf4l",
+      width: 300, height: 400, crop: :fill, class:"card-show" %>
+<br>
+<%= link_to "Create a dose", new_cocktail_dose_path(@cocktail), class:"btn btn-primary" %>
+<%= link_to "Home", cocktails_path, class:"btn btn-primary"  %>
